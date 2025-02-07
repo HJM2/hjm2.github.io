@@ -113,3 +113,17 @@ a:hover {
   }
 }
 
+@media print {
+  nav,
+  footer {
+    display: none;
+  }
+  body {
+    font-size: 12pt;
+  }
+  .responsive-section {
+    box-shadow: none;
+    border: 1px solid #000;
+  }
+}
+
