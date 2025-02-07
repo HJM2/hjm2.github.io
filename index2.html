@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>My Profile Page</title>
+  
+ 
+  <style>
+    /* Navigation styling  */
+    nav ul {
+      list-style-type: none;
+      background-color: #333;
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+    }
+    nav ul li {
+      float: left;
+    }
+    nav ul li a {
+      display: block;
+      color: #fff;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+    }
+    nav ul li a:hover {
+      background-color: #111;
+    }
+  </style>
+  
+  <!-- Link to the external CSS file -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Navigation Menu -->
+  <div>
+    <nav>
+      <ul>
+        <li><a href="#basic-profile">Basic Profile</a></li>
+        <li><a href="#education-summary">Education Summary</a></li>
+        <li><a href="#work-experience">Work Experience</a></li>
+        <li><a href="#programming-skills">Programming Skills</a></li>
+        <li><a href="#general-interests">General Interests</a></li>
+        <li><a href="#favorites">Favorite Song, Film, TV Show</a></li>
+        <li><a href="#favorite-websites">Favorite Websites</a></li>
+        <li><a href="#my-projects">My Projects</a></li>
+      </ul>
+    </nav>
+  </div>
+
+  <!-- Basic Profile Information Section -->
+  <section id="basic-profile" class="responsive-section">
+    <h1>Hassan Mousa</h1>
+    <p><span>Major:</span> Computer Science</p>
+    
+    <!-- One image from your GitHub repository -->
+    <p>Github repo hosted image:</p>
+    <img src="imagegithub.jpg" alt="My Profile Picture" width="200" />
+
+    <!-- One image hosted externally -->
+    <p>Externally hosted image:</p>
+    <img src="https://i.imgur.com/t3Pubeh.jpeg" alt="Avatar from a third-party" width="150" />
+  </section>
+
+  <!-- Education Summary Section  -->
+  <section id="education-summary" class="responsive-section" style="border: 2px dashed #ccc;">
+    <h2>Education Summary</h2>
+    <p>I am currently a junior at St John's University, pursuing a B.S. in Computer Science. My coursework includes network security, web development, and humanity classes for this semester.</p>
+    <ul>
+      <li>B.S. in Computer Science, St John's University (Expected 2025-26)</li>
+    </ul>
+  </section>
+
+  <!-- Work Experience / Internships Section -->
+  <section id="work-experience" class="responsive-section">
+    <h2>Work Experience / Internships</h2>
+    <ul>
+      <li>US Navy Auxiliary Submarine Mechanic 2017-2021</li>
+      <li>Pharmacy Technician 2014-2017</li>
+    </ul>
+  </section>
+
+  <!-- Programming Skills Section -->
+  <section id="programming-skills" class="responsive-section">
+    <h2>Programming Skills</h2>
+    <table>
+      <tr>
+        <th>Language</th>
+        <th>Experience Level</th>
+      </tr>
+      <tr>
+        <td>C++</td>
+        <td>Beginner</td>
+      </tr>
+      <tr>
+        <td>Java</td>
+        <td>Intermediate</td>
+      </tr>
+      <tr>
+        <td>HTML/CSS</td>
+        <td>Beginner</td>
+      </tr>
+      <tr>
+        <td>JavaScript</td>
+        <td>Beginner</td>
+      </tr>
+    </table>
+  </section>
+
+  <!-- General Interests Section -->
+  <section id="general-interests" class="responsive-section">
+    <h2>General Interests</h2>
+    <p>I love exploring new technologies, calisthenics, playing video games, reading non-fiction books or research papers, and cooking.</p>
+  </section>
+
+  <!-- Favorite Song, Film, and TV Show Section -->
+  <section id="favorites" class="responsive-section">
+    <h2>Favorite Song, Film, and TV Show</h2>
+    <h3>Favorite Song</h3>
+    <iframe 
+      width="560" 
+      height="315" 
+      src="https://www.youtube.com/embed/RFGrAHn0Whk" 
+      title="YouTube video player" 
+      frameborder="0" 
+      allowfullscreen>
+    </iframe>
+    <h3>Favorite Film</h3>
+    <p>Our favorite film is <strong>Lucky Number Slevin</strong>.</p>
+    <p><a href="https://www.justwatch.com/us/movie/lucky-number-slevin" target="_blank">Watch Lucky Number Slevin on JustWatch</a></p>
+    <h3>Favorite TV Show</h3>
+    <p>Our favorite TV show is <strong>Burn Notice</strong>.</p>
+    <p><a href="https://www.justwatch.com/us/tv-show/burn-notice" target="_blank">Watch Burn Notice on JustWatch</a></p>
+  </section>
+
+  <!-- Favorite Websites Section -->
+  <section id="favorite-websites" class="responsive-section">
+    <h2>Favorite Websites</h2>
+    <ul>
+      <li>
+        <a href="https://www.youtube.com" target="_blank">YouTube</a> – Where productivity goes to die... or thrive, depending on how strong your willpower is.
+      </li>
+      <li>
+        <a href="https://stackoverflow.com" target="_blank">Stack Overflow</a>
+      </li>
+    </ul>
+  </section>
+
+  <!-- My Projects Section -->
+  <section id="my-projects" class="responsive-section">
+    <h2>My Projects in This Course</h2>
+    <ul>
+      <li>
+        <a href="https://hjm2.github.io/">Milestone 1</a> 
+	<a href="https://hjm3.github.io/">Milestone 2</a> – This is the current profile page.
+      </li>
+    </ul>
+  </section>
+
+  <!-- Contact Form Section (with inline style on the button) -->
+  <section class="form-section responsive-section">
+    <h2>Contact Me</h2>
+    <form action="">
+      <p>
+        <label for="name">Name:</label><br />
+        <input type="text" id="name" name="name" />
+      </p>
+      <p>
+        <label for="message">Message:</label><br />
+        <textarea id="message" name="message"></textarea>
+      </p>
+      <button type="submit" style="background-color: var(--accent-color); color: white; padding: 10px 20px; border: none; border-radius: 4px;">
+        Send
+      </button>
+    </form>
+  </section>
+
+</body>
+</html>
