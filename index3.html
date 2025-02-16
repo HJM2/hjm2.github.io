@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>My Profile Page - Bootstrap Version</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>	
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Bootstrap Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand" href="#">Profile</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" 
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+       <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+         <li class="nav-item active">
+            <a class="nav-link" href="#basic-profile">Basic Profile</a>
+         </li>
+         <li class="nav-item">
+            <a class="nav-link" href="#education-summary">Education</a>
+         </li>
+         <li class="nav-item">
+            <a class="nav-link" href="#work-experience">Experience</a>
+         </li>
+         <li class="nav-item">
+            <a class="nav-link" href="#programming-skills">Skills</a>
+         </li>
+         <li class="nav-item">
+            <a class="nav-link" href="#general-interests">Interests</a>
+         </li>
+         <li class="nav-item">
+            <a class="nav-link" href="#favorites">Favorites</a>
+         </li>
+         <li class="nav-item">
+            <a class="nav-link" href="#favorite-websites">Websites</a>
+         </li>
+         <li class="nav-item">
+            <a class="nav-link" href="#my-projects">Projects</a>
+         </li>
+         <li class="nav-item">
+            <a class="nav-link" href="#contact">Contact</a>
+         </li>
+      </ul>
+    </div>
+  </nav>
+
+<div id="basic-profile" class="container mt-4">
+  <!-- First row: Text only -->
+  <div class="row mb-4">
+    <div class="col-12">
+      <h1>Welcome to my Profile</h1>
+      <p>This is my profile page. Below you'll find details about my education, work experience, skills, and more.</p>
+    </div>
+  </div>
+
+  <!-- Second row: Image/card -->
+  <div class="row mb-4">
+    <div class="col-md-4">
+      <div class="card">
+        <img class="card-img-top" src="imagegithub.jpg" alt="Profile Picture">
+        <div class="card-body">
+          <h5 class="card-title">Hassan Mousa</h5>
+          <p class="card-text"><strong>Major:</strong> Computer Science</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+    <!-- Education Summary Section -->
+    <div id="education-summary" class="row mb-4">
+      <div class="col-12">
+         <!-- Bootstrap Alert for section header -->
+         <div class="alert alert-info" role="alert">
+           Education Summary
+         </div>
+      </div>
+      <div class="col-md-6">
+         <div class="card">
+           <div class="card-body">
+             <h2 class="card-title">Education</h2>
+             <p class="card-text">I am currently a junior at St John's University, pursuing a B.S. in Computer Science. My coursework includes network security, web development, and humanities.</p>
+           </div>
+         </div>
+      </div>
+      <div class="col-md-6">
+         <!-- (Element #4) -->
+         <ul class="list-group">
+           <li class="list-group-item">B.S. in Computer Science, St John's University (Expected 2025-26)</li>
+	   <li class="list-group-item">Forest Hills High School (2010-2014)</li>
+         </ul>
+      </div>
+    </div>
+
+    <!-- Work Experience Section -->
+    <div id="work-experience" class="row mb-4">
+      <div class="col-12">
+         <h2>Work Experience / Internships</h2>
+         <ul class="list-group">
+           <li class="list-group-item">US Navy Auxiliary Submarine Mechanic 2017-2021</li>
+           <li class="list-group-item">Pharmacy Technician 2014-2017</li>
+         </ul>
+      </div>
+    </div>
+
+   
+    <div id="programming-skills" class="row mb-4">
+      <div class="col-12">
+         <h2>Programming Skills</h2>
+         <table class="table table-striped">
+           <thead>
+             <tr>
+               <th>Language</th>
+               <th>Experience Level</th>
+             </tr>
+           </thead>
+           <tbody>
+             <tr>
+               <td>C++</td>
+               <td>Beginner</td>
+             </tr>
+             <tr>
+               <td>Java</td>
+               <td>Intermediate</td>
+             </tr>
+             <tr>
+               <td>HTML/CSS</td>
+               <td>Beginner</td>
+             </tr>
+             <tr>
+               <td>JavaScript</td>
+               <td>Beginner</td>
+             </tr>
+           </tbody>
+         </table>
+      </div>
+    </div>
+
+   
+    <div id="general-interests" class="row mb-4">
+      <div class="col-12">
+         <h2>General Interests</h2>
+         <p>I love exploring new technologies, calisthenics, playing video games, reading non-fiction books or research papers, and cooking.</p>
+      </div>
+    </div>
+
+    
+    <div id="favorites" class="row mb-4">
+      <div class="col-12">
+         <h2>Favorite Song, Film, and TV Show</h2>
+         <h3>Favorite Song</h3>
+         <!-- Responsive Embed (Bootstrap Element #5) for YouTube video -->
+         <div class="embed-responsive embed-responsive-16by9 mb-3">
+           <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/RFGrAHn0Whk" allowfullscreen></iframe>
+         </div>
+         <h3>Favorite Film</h3>
+         <p>Our favorite film is <strong>Lucky Number Slevin</strong>. <a href="https://www.justwatch.com/us/movie/lucky-number-slevin" target="_blank">Watch on JustWatch</a></p>
+         <h3>Favorite TV Show</h3>
+         <p>Our favorite TV show is <strong>Burn Notice</strong>. <a href="https://www.justwatch.com/us/tv-show/burn-notice" target="_blank">Watch on JustWatch</a></p>
+      </div>
+    </div>
+
+    <!-- Favorite Websites Section -->
+    <div id="favorite-websites" class="row mb-4">
+      <div class="col-12">
+         <h2>Favorite Websites</h2>
+         <ul class="list-group">
+           <li class="list-group-item"><a href="https://www.youtube.com" target="_blank">YouTube</a> – Where productivity goes to die... or thrive.</li>
+           <li class="list-group-item"><a href="https://stackoverflow.com" target="_blank">Stack Overflow</a></li>
+         </ul>
+      </div>
+    </div>
+
+    
+    <div id="my-projects" class="row mb-4">
+      <div class="col-12">
+         <h2>My Projects in This Course</h2>
+         <ul class="list-group">
+           <li class="list-group-item"><a href="https://hjm2.github.io/">Milestone 1</a> </li>
+	   <li class="list-group-item"><a href="https://hjm2.github.io/index2.html">Milestone 2</a> </li>
+           <li class="list-group-item"><a href="https://hjm2.github.io/index3.html">Milestone 3</a> </li>
+         </ul>
+      </div>
+    </div>
+
+   
+    <div id="contact" class="row mb-4">
+      <div class="col-12">
+         <h2>Contact Me</h2>
+            <div class="form-group">
+             <label for="name">Name:</label>
+             <input type="text" class="form-control" id="name" name="name">
+           </div>
+           <div class="form-group">
+             <label for="message">Message:</label>
+             <textarea class="form-control" id="message" name="message" rows="4"></textarea>
+           </div>
+           <button type="submit" class="btn btn-primary">Send</button>
+         </form>
+      </div>
+    </div>
+
+  </div> <!-- End Container -->
+
+ 
+</body>
+</html>
