@@ -1,0 +1,109 @@
+{
+    "quizzes": [
+      {
+        "id": 1,
+        "title": "JavaScript Basics"
+      },
+      {
+        "id": 2,
+        "title": "Python Fundamentals"
+      }
+    ],
+    "questions": [
+      {
+        "id": 1,
+        "quizId": 1,
+        "type": "multiple",
+        "question": "Which of the following is NOT a primitive data type in JavaScript?",
+        "choices": ["String", "Number", "Boolean", "Element"],
+        "correctIndex": 3,
+        "explanation": "JavaScript's primitive types include Number, String, Boolean, undefined, null, Symbol (and BigInt). 'Element' is not a primitive type; it's an object (like a DOM element)."
+      },
+      {
+        "id": 2,
+        "quizId": 1,
+        "type": "text",
+        "question": "What keyword declares a block-scoped variable in ES6 JavaScript?",
+        "answer": "let",
+        "explanation": "In ES6, the 'let' keyword is used to declare a block-scoped variable (as opposed to 'var', which is function-scoped)."
+      },
+      {
+        "id": 3,
+        "quizId": 1,
+        "type": "multiple",
+        "question": "Which keyword is used to define a function in JavaScript?",
+        "choices": ["function", "def", "func", "define"],
+        "correctIndex": 0,
+        "explanation": "In JavaScript, you define a function using the 'function' keyword. (By contrast, Python uses 'def'.)"
+      },
+      {
+        "id": 4,
+        "quizId": 1,
+        "type": "image",
+        "question": "Which image shows the JavaScript logo?",
+        "choices": [
+          "https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png",
+          "https://upload.wikimedia.org/wikipedia/en/3/30/Java_programming_language_logo.svg",
+          "https://upload.wikimedia.org/wikipedia/commons/6/61/HTML5_logo_and_wordmark.svg"
+        ],
+        "correctIndex": 0,
+        "explanation": "The JavaScript logo is the first image (the stylized 'JS'). The others depict Java and HTML, respectively."
+      },
+      {
+        "id": 5,
+        "quizId": 1,
+        "type": "text",
+        "question": "What file extension is used for JavaScript files?",
+        "answer": "js",
+        "explanation": "JavaScript files have the extension '.js'."
+      },
+      {
+        "id": 6,
+        "quizId": 2,
+        "type": "multiple",
+        "question": "Which of the following is NOT a built-in data type in Python?",
+        "choices": ["List", "Dictionary", "Set", "Tree"],
+        "correctIndex": 3,
+        "explanation": "Python includes built-in types like int, float, str, list, dict, set, tuple, etc. 'Tree' is not a built-in data type in Python."
+      },
+      {
+        "id": 7,
+        "quizId": 2,
+        "type": "text",
+        "question": "What keyword is used to define a function in Python?",
+        "answer": "def",
+        "explanation": "In Python, functions are defined using the 'def' keyword."
+      },
+      {
+        "id": 8,
+        "quizId": 2,
+        "type": "image",
+        "question": "Which image shows the logo of the Python programming language?",
+        "choices": [
+          "https://upload.wikimedia.org/wikipedia/commons/c/c3/Python-logo-notext.svg",
+          "https://upload.wikimedia.org/wikipedia/en/3/30/Java_programming_language_logo.svg",
+          "https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png"
+        ],
+        "correctIndex": 0,
+        "explanation": "The first image depicts the Python logo (the stylized blue/yellow snakes). The others are Java and JavaScript logos."
+      },
+      {
+        "id": 9,
+        "quizId": 2,
+        "type": "text",
+        "question": "What file extension is used for Python files?",
+        "answer": "py",
+        "explanation": "Python files use the '.py' extension."
+      },
+      {
+        "id": 10,
+        "quizId": 2,
+        "type": "multiple",
+        "question": "How do you denote code blocks (scope) in Python?",
+        "choices": ["Curly braces {}", "Indentation", "Parentheses ()", "Begin/End keywords"],
+        "correctIndex": 1,
+        "explanation": "Python uses indentation (whitespace) to denote code blocks instead of curly braces or keywords."
+      }
+    ]
+  }
+  
