@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Online Quiz SPA</title>
+
+  <link 
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" 
+    rel="stylesheet" 
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3D65VohhpuuCOmLASjC" 
+    crossorigin="anonymous">
+
+
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body class="bg-gradient vh-100 d-flex flex-column m-0">
+
+
+
+
+  <div class="d-flex flex-grow-1 justify-content-center align-items-center">
+  <div class="w-100 px-3" style="max-width: 700px;">
+
+      
+      <div id="status-bar" class="d-none bg-light p-2 mb-3">
+        <strong>Name:</strong> <span id="status-name"></span> &nbsp; 
+        <strong>Score:</strong> <span id="status-score">0</span> &nbsp; 
+        <strong>Completed:</strong> <span id="status-progress">0/0</span> &nbsp; 
+        <strong>Time:</strong> <span id="status-time">0:00</span>
+      </div>
+
+     
+      <div id="app"></div>
+
+    </div>
+  </div>
+
+  
+
+  <!-- Welcome Screen Template -->
+  <script id="welcome-template" type="text/x-handlebars-template">
+    <div class="text-center my-4">
+      <h1 class="display-4 fw-bold mb-4">Welcome to the Quiz!</h1>
+      <p class="lead">Please enter your name and choose a quiz:</p>
+      <div class="my-3 mx-auto" style="max-width: 400px;">
+        <input id="playerNameInput" 
+               type="text" 
+               class="form-control text-center" 
+               placeholder="Your name" 
+               value="{{#if name}}{{name}}{{/if}}" />
+      </div>
+      <div class="mt-4">
+        {{#each quizzes}}
+          <button class="btn btn-primary m-2 start-quiz-btn" data-quiz-id="{{id}}">
+            {{title}}
+          </button>
+        {{/each}}
+      </div>
+    </div>
+  </script>
+
+  <!-- Multiple-Choice Question Template -->
+  <script id="question-multiple-template" type="text/x-handlebars-template">
+    <div class="card my-4">
+      <div class="card-body">
+        <h3 class="card-title">{{question}}</h3>
+        <div class="mt-3">
+          {{#each choices}}
+            <button class="btn btn-outline-primary m-2 choice-btn" data-index="{{@index}}">
+              {{this}}
+            </button>
+          {{/each}}
+        </div>
+      </div>
+    </div>
+  </script>
+
+  <!-- Text-Input Question Template -->
+  <script id="question-text-template" type="text/x-handlebars-template">
+    <div class="card my-4">
+      <div class="card-body">
+        <h3 class="card-title">{{question}}</h3>
+        <div class="mt-3">
+          <input id="textAnswerInput" 
+                 type="text" 
+                 class="form-control d-inline-block w-50" 
+                 placeholder="Type your answer..." />
+          <button class="btn btn-primary ms-2" id="submit-text-btn">Submit</button>
+        </div>
+      </div>
+    </div>
+  </script>
+
+  <!-- Image-Selection Question Template -->
+  <script id="question-image-template" type="text/x-handlebars-template">
+    <div class="card my-4">
+      <div class="card-body">
+        <h3 class="card-title">{{question}}</h3>
+        <div class="mt-3">
+          {{#each choices}}
+            <img src="{{this}}" 
+                 alt="Option {{@index}}" 
+                 data-index="{{@index}}" 
+                 class="img-choice m-2 border rounded" 
+                 style="width: 140px; cursor: pointer;" />
+          {{/each}}
+        </div>
+      </div>
+    </div>
+  </script>
+
+  <!-- Incorrect Answer Feedback Template -->
+  <script id="feedback-incorrect-template" type="text/x-handlebars-template">
+    <div class="alert alert-danger mt-4" role="alert">
+      <h4 class="alert-heading">Incorrect</h4>
+      <p>{{explanation}}</p>
+      <hr>
+      <button class="btn btn-secondary" id="next-btn">Got it</button>
+    </div>
+  </script>
+
+  <!-- Correct Answer Feedback Template -->
+  <script id="feedback-correct-template" type="text/x-handlebars-template">
+    <div class="alert alert-success text-center mt-4" role="alert">
+      <h4><strong>{{message}}</strong></h4>
+    </div>
+  </script>
+
+  <!-- Final Result Template -->
+  <script id="result-template" type="text/x-handlebars-template">
+    <div class="card my-4 text-center">
+      <div class="card-body">
+        <h2>{{resultMessage}}</h2>
+        <p class="mt-3">
+          You answered <strong>{{score}} out of {{total}}</strong> questions correctly 
+          in <strong>{{time}}</strong> seconds.
+        </p>
+        <button class="btn btn-primary m-2" id="retake-btn">Retake Quiz</button>
+        <button class="btn btn-secondary m-2" id="home-btn">Back to Home</button>
+      </div>
+    </div>
+  </script>
+
+  <!-- Handlebars + App Script -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.8/handlebars.min.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

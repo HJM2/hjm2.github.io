@@ -1,0 +1,24 @@
+/* style.css */
+
+/* Give the body a subtle gradient */
+body {
+  background: linear-gradient(120deg, #f8f9fa, #e9ecef 70%);
+  min-height: 100vh;
+}
+
+/* Make the quiz images stand out a bit more */
+.img-choice:hover {
+  opacity: 0.8;
+  box-shadow: 0 0 5px rgba(0,0,0,0.2);
+}
+
+/* Show the status bar distinctly */
+#status-bar {
+  border-bottom: 1px solid #ccc;
+  font-size: 0.95rem;
+}
+
+/* Example: add a bit more spacing to the question text */
+.card-title {
+  font-weight: 600;
+}
